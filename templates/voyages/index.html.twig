@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VoyagesController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="my-5 text-center">Nos découvertes</h1>
+    <div class="row">
+    {% for voyage in voyages %}
+    <div class="col-md-4 mt-4">
+        <div class="card profile-card-5">
+            <div class="card-img-block">
+                <img src="{{voyage.image}}" alt="photo du voyage" class="card-img-top">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{voyage.titre}}
+                </h5>
+                <p class="card-text">
+                    {{voyage.description}}
+                </p>
+                <div class="voyages-links d-flex justify-content-between">
+                    
+                    <a href="{{ path('voyages_show',
+                            {'id' : voyage.id}
+                     ) }}" class="btn btn-outline-info" target="_blank">
+                        <i class="fas fa-info-circle"></i>
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    <div class="row">
+        
+        
+    </div>
+</div>
+
+{% endblock %}

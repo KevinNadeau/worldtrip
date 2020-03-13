@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <h1 class="text-center my-5">
+        {{voyage.titre}}
+    </h1>
+    <div class="row">
+        <div class="col-4">
+            <img src="{{ voyage.image }}" alt="photo de voyage" />
+        </div>
+        <div class="col-6 ml-5">
+        <p>
+            {{voyage.description}}
+        </p>
+        <div class="justify-content-around d-flex">
+            <a href="#" class="btn btn-outline-info">
+                        <i class="fas fa-info-circle"></i>
+                        Télécharger
+                    </a>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

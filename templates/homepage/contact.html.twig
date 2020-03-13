@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomepageController!{% endblock %}
+
+{% block body %}
+    <div class="container text-center border">
+        <div class="row my-5">
+            <div class="col">
+                <h1>Formulaire de contact</h1>
+                <h2>Laissez nous vos messages <i class="fas fa-smile-beam"></i></h2>
+            </div>
+        </div>
+        <div class="row my-5">
+            <!--nom-->
+            <div class="col">
+            Nom
+            <input type="text" />
+            </div>
+            <!--prénom-->
+            <div class="col">                        
+            Prénom
+            <input type="text" />
+            </div>
+            <!--mail-->
+            <div class="col">
+            <i class="fas fa-envelope-open-text"></i>
+            Mail
+            <input type="text" />
+            </div>
+            </div>
+            <!--message-->
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}

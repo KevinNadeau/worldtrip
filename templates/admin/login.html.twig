@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container-fluid row jusify-content-center">
+    <div class="col-md-6">
+        <h1 class="text-center">
+            Connexion administrateur
+        </h1>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="username">login: </label>
+                <input type="text" name="_username" required id="username" class="form-control" placeholder="Mon username">
+            </div>
+            <div class="form-group">
+                <label for="password">password: </label>
+                <input type="password" name="_password" required id="password" class="form-control" placeholder="Mon password">
+            </div>
+            {% if error %}
+                <div class="alert alert-danger text-center">
+                    <p>Erreur lors de l'authentification</p>
+                </div>
+            {% endif %}
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">
+                    Connexion
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
